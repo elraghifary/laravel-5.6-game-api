@@ -28,6 +28,10 @@ start a development server at http://localhost:8000
 
 ```php artisan serve```
 
+## Postman
+
+https://documenter.getpostman.com/view/4941285/RWTixfPz
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
