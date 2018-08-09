@@ -12,6 +12,10 @@ Copy .env and edit database
 
 ```cp .env.example .env```
 
+Update key
+
+```php artisan key:generate```
+
 Running migrations
 
 ```php artisan migrate```
