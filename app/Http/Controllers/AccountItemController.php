@@ -27,6 +27,7 @@ class AccountItemController extends Controller
             'quantity' => 'required|numeric'
         ]);
 
+        // check if account has been authenticated
         $account_id = $request->user()->token()->user_id;
 
         $item = Shop::where('base_item_id', $request->base_item_id)->with('base_item')->get();
@@ -35,6 +36,7 @@ class AccountItemController extends Controller
         
         $gold = Account::where('account_id', $account_id)->pluck('gold');
 
+        // check if account has enough gold to buy item
         if ($total > $gold[0]) {
             return response()->json([
                 'message' => 'Insufficient Gold'
@@ -47,8 +49,8 @@ class AccountItemController extends Controller
             'quantity' => $request->quantity
         ]);
 
+        // update gold that has been used to buy item
         $gold[0] = $gold[0] - $total;
-
         \App\Account::where('account_id', $account_id)
                     ->update(['gold' => $gold[0]]);
 
@@ -66,6 +68,7 @@ class AccountItemController extends Controller
      */
     public function get_inventory(Request $request)
     {
+        // check if account has been authenticated
         $account_id = $request->user()->token()->user_id;
 
         $account_items = AccountItem::where('account_id', $account_id)->with('account', 'base_item')->get();
