@@ -1,3 +1,7 @@
+## Development Tools
+Laragon 3.4 (Apache 2.4, PHP 7.2, MySQL 5.7)
+https://sourceforge.net/projects/laragon/files/releases/3.4/laragon-wamp.exe/download
+
 ## Installation
 
 Clone this repository
