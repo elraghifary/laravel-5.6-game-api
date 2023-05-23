@@ -6,7 +6,7 @@ https://sourceforge.net/projects/laragon/files/releases/3.4/laragon-wamp.exe/dow
 
 Clone this repository
 
-```git clone https://github.com/elraghifary/game-api-laravel.git```
+```git clone https://github.com/elraghifary/laravel-5.6-game-api.git```
 
 Update dependencies
 
